@@ -35,6 +35,7 @@ public class ExplorerSearch {
         return -1;
     }
 
+    // Finds the explorer's initial starting position
     public static int[] findStart(int[][] island) {
         for (int row = 0; row < island.length; row++) {
             for (int col = 0; col < island[0].length; col++) {

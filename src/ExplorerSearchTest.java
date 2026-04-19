@@ -39,4 +39,13 @@ public class ExplorerSearchTest {
 
         assertArrayEquals(new int[]{1,1}, start);
     }
+
+    @Test
+    public void testReachableArea_simpleMovement() {
+        int[][] island = {
+            {0, 1}
+        };
+        int actual = ExplorerSearch.reachableArea(island);
+        assertEquals(2, actual);
+    }
 }
