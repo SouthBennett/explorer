@@ -26,4 +26,17 @@ public class ExplorerSearchTest {
         int actual = ExplorerSearch.reachableArea(island);
         assertEquals(1, actual);
     }
+
+    @Test
+    public void testReachableArea_findStartSimple() {
+        int[][] island = {
+            {1, 1, 1},
+            {1, 0, 1},
+            {1, 1, 1}
+        };
+
+        int[] start = ExplorerSearch.findStart(island);
+
+        assertArrayEquals(new int[]{1,1}, start);
+    }
 }
