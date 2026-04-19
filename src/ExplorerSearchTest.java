@@ -28,7 +28,7 @@ public class ExplorerSearchTest {
     }
 
     @Test
-    public void testReachableArea_findStartSimple() {
+    public void testfindStartSimple() {
         int[][] island = {
             {1, 1, 1},
             {1, 0, 1},
