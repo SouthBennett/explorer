@@ -32,10 +32,14 @@ public class ExplorerSearch {
         // Implement your method here!
         // Please also make more test cases
         // I STRONGLY RECOMMEND testing some helpers you might make too
-        return -1;
+        int[] start = findStart(island);
+
+        boolean[][] visited = new boolean[island.length][island[0].length];
+        
+        return explore(island, start[0], start[1], visited);
     }
 
-    // Finds the explorer's initial starting position
+    // returns the explorer's initial starting position
     public static int[] findStart(int[][] island) {
         for (int row = 0; row < island.length; row++) {
             for (int col = 0; col < island[0].length; col++) {
@@ -47,9 +51,10 @@ public class ExplorerSearch {
         return null;
     }
 
+    // returns the count of every possible space available for the explorer to move to (also includes the starting position)
     public static int explore(int[][] island, int row, int col, boolean[][] visited) {
-        if (row < 0 || row  > island.length || 
-            col < 0 || col > island[0].length ||
+        if (row < 0 || row  >= island.length || 
+            col < 0 || col >= island[0].length ||
             visited[row][col] || island[row][col] == 2 || 
             island[row][col] == 3
         ) return 0;
