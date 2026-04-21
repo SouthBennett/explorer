@@ -81,4 +81,20 @@ public class ExplorerSearchTest {
         int actual = ExplorerSearch.reachableArea(island);
         assertEquals(1, actual);
     }
+
+    @Test
+    public void testReachableArea_fullyOpen() {
+        int[][] island = {
+            {1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 0, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1},
+            {1, 1, 1, 1, 1, 1, 1, 1},
+
+        };
+        int actual = ExplorerSearch.reachableArea(island);
+        assertEquals(56, actual);
+    }
 }
