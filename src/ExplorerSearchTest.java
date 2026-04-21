@@ -71,5 +71,14 @@ public class ExplorerSearchTest {
         assertEquals(1, actual);
     }
 
-    
+    @Test
+    public void testReachableArea_diagonalMovement() {
+        int[][] island = {
+            {1, 3, 1},
+            {3, 0, 3},
+            {1, 3, 1}
+        };
+        int actual = ExplorerSearch.reachableArea(island);
+        assertEquals(1, actual);
+    }
 }
