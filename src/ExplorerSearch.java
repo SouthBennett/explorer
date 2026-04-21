@@ -61,6 +61,7 @@ public class ExplorerSearch {
 
         visited[row][col] = true;
 
+        // count the starting position of the explorer
         int count = 1;
 
         count += explore(island, row - 1, col, visited); //up

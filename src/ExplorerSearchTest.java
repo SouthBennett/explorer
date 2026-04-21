@@ -48,4 +48,15 @@ public class ExplorerSearchTest {
         int actual = ExplorerSearch.reachableArea(island);
         assertEquals(2, actual);
     }
+
+    @Test
+    public void testReachableArea_waterBlocked() {
+        int[][] island = {
+            {2, 2, 2},
+            {2, 0, 2},
+            {2, 2, 2}
+        };
+        int actual = ExplorerSearch.reachableArea(island);
+        assertEquals(1, actual);
+    }
 }
