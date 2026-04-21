@@ -59,4 +59,17 @@ public class ExplorerSearchTest {
         int actual = ExplorerSearch.reachableArea(island);
         assertEquals(1, actual);
     }
+
+    @Test
+    public void testReachableArea_blockedByMountain() {
+        int[][] island = {
+            {3, 3, 3},
+            {3, 0, 3},
+            {3, 3, 3}
+        };
+        int actual = ExplorerSearch.reachableArea(island);
+        assertEquals(1, actual);
+    }
+
+    
 }
